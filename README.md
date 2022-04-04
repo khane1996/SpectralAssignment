@@ -31,4 +31,5 @@ Scenario 1 is the only one that requires Internet access as it will try to insta
 I elected not to use chef/puppet or any other pilot system (my preference goes to salt-stack in case you are wondering) as it hardly make sense in a single computer/single deployment type of scenario. If I had to, I would probably elect to use chef-solo/knife-solo as the tool for the job. 
 
 ## Instructions
-First step is to clone the present repository 
+First step is to clone the present repository:
+` https://github.com/khane1996/SpectralAssignment.git `
