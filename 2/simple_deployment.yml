@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-deploy
+spec:
+  selector:
+    matchLabels:
+      run: simple-deploy
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        run: simple-deploy
+    spec:
+      containers:
+        - image: jhassignement/nginx_simple:latest
+          imagePullPolicy: Never
+          name: simple-nginx
+          ports:
+          - containerPort: 80
