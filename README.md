@@ -33,3 +33,5 @@ I elected not to use chef/puppet or any other pilot system (my preference goes t
 ## Instructions
 First step is to clone the present repository:
 > ` git clone https://github.com/khane1996/SpectralAssignment.git `
+This will create a directory called **SpectralAssignment** under your current pwd location.
+
