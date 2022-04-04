@@ -32,4 +32,4 @@ I elected not to use chef/puppet or any other pilot system (my preference goes t
 
 ## Instructions
 First step is to clone the present repository:
-` https://github.com/khane1996/SpectralAssignment.git `
+> ` git clone https://github.com/khane1996/SpectralAssignment.git `
