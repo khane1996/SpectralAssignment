@@ -33,5 +33,26 @@ I elected not to use chef/puppet or any other pilot system (my preference goes t
 ## Instructions
 First step is to clone the present repository:
 > ` git clone https://github.com/khane1996/SpectralAssignment.git `
+
 This will create a directory called **SpectralAssignment** under your current pwd location.
 
+- **Scenario 0:** 
+To install scenario 0 (no root, no install, python 3 http server) use the following command:
+> ` ./SpectralAssignment/0.sh install ` 
+
+Usage: the script will point you to http://127.0.0.1:9080 - you can access this URL with a local web browser to check the webpage.
+This webpage is only visible from the localhost.
+If you want to make the webpage visible from other client you will need to edit line 59 in 0.sh script and remove `--bind localhost`
+
+You can exit the server with ctrl+c
+
+
+To uninstall scenario 0 use:
+> ` ./SpectralAssignment/0.sh clean `
+
+- **Scenario 1:**
+To install scenario 1 ( Host NGINX ) use the following command: 
+> ` ./SpectralAssignment/1.sh install `
+
+Usage: The script will backup current default NGINX website if it exist and replace it with the Spectral assignment page.
+This will only work on fairly standard NGINX installation.
