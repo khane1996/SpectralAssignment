@@ -37,6 +37,8 @@ First step is to clone the present repository:
 This will create a directory called **SpectralAssignment** under your current pwd location.
 
 - **Scenario 0:** 
+*Requirements: Bash, Python 3, unzip, port 9080 not used*
+
 To install scenario 0 (no root, no install, python 3 http server) use the following command:
 > ` ./SpectralAssignment/0.sh install ` 
 
@@ -51,8 +53,32 @@ To uninstall scenario 0 use:
 > ` ./SpectralAssignment/0.sh clean `
 
 - **Scenario 1:**
-To install scenario 1 ( Host NGINX ) use the following command: 
+*requirements: Bash, unzip, root rights, access to the Internet
+
+To install scenario 1 ( Host NGINX ) use the following command as root: 
 > ` ./SpectralAssignment/1.sh install `
 
 Usage: The script will backup current default NGINX website if it exist and replace it with the Spectral assignment page.
-This will only work on fairly standard NGINX installation.
+This will only work on standard NGINX installation that uses /var/www/html as their root folder for default installation. 
+(Tested with vanilla Debian 11, Debian 10 and Linuxt Mint 20.3) 
+
+The back is done in /var/www/html.old/html.x 
+If the script is called multiple time, the value of x will increase.
+
+There is no uninstaller for this script as it may do more harm than good in a real environment, or would take more than four hours and a fairly good nginx parser to work properly.
+
+I am not using virtual websites as they behave very differently depending on whether you are using the official NGINX package or the package from Debian with sites-available/sites-enabled.
+
+- **Scenario 2:**
+*requirements: Bash, Docker, Minikube, bzip2
+
+To install scenario 2 (Minikuba with three pods and a front service) user the following command as a Minikube user 
+(generally it means you must be a member of the docker group)
+> ` ./SpectralAssignment/2.sh `
+
+Usage: the script will import and deploy everything automatically. It will then give you the uRL of the place you can go to see the webpage
+The service port will be 32080
+
+To uninstall scenario 2 use:
+> ` ./SpectralAssignment/2.sh clean `
+
