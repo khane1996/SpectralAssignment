@@ -56,9 +56,9 @@ cp spectral.html ./v0/index.html
 cd ./v0
 # I do not test whether the port is available
 # This is after all the quick and (not so) dirty solution
-python3 -m http.server --bind localhost 9080 &
+python3 -m http.server --bind 127.0.0.1 9080 &
 SERVER_PID="$!"
 trap ctrl_c INT EXIT
-echo "the file can be accessed from http://localhost:9080"
+echo "the file can be accessed from http://127.0.0.1:9080"
 echo "use CTRL+C to stop the server"
 sleep infinity
