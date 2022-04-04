@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Time to pretend we do know a bit about newer devops method
-# Using minkube this is a 3 replica deployment with multiple containers in pod
-# the pattern for containers is main and Adapter
-# I used haproxy as the Adapter because proxyfying NGINX with NGINX is doable
-# without resorting to an adapter and looks like bad design.
-
 # Here I assume that minikube can't pull images from the Net
 # So I am packaging a ready made image. But you have the docker file in the "2" folder if you want
 
