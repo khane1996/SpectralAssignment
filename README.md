@@ -11,7 +11,7 @@ The main goal was to create an install system that would
 - Be as foolproof as reasonably possible given the time constraint (four hours)
 - Only require the execution of one command
 - would work on most modern debian (10 or 11) or debian based operating system
-- If reasonable would allow the user to rever the installation
+- If reasonable would allow the user to revert the installation
 
 On top of these constraints three scenarios were created with further added constraints:
 - Scenario 0: The target computer is a certified server and nothing can be installed on it. Furthermore there is no root access to the computer. Actually should the install system be launched with PID 0, it should refuse to continue. But it does have Python3 pre-installed
